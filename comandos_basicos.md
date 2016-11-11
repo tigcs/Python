@@ -65,3 +65,28 @@ max(...)
     the provided iterable is empty.
     With two or more arguments, return the largest argument.
 ````
+===
+Importar módulos (ou pacotes) que contenham funções que deseja usar.
+
+````programing
+
+import math
+
+# Listando todas as funções contidas no módulo `math`
+>>> dir(math)
+['__doc__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'log2', 'modf', 'nan', 'pi', 'pow', 'radians', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'trunc']
+
+# Acessando o help da função `sqrt`
+>>>help(math.sqrt)
+Help on built-in function sqrt in module math:
+
+sqrt(...)
+    sqrt(x)
+    
+    Return the square root of x.
+
+# Usando a função `sqrt`
+>>> math.sqrt(4)
+2.0
+````
+===
