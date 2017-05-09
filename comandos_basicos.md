@@ -4,16 +4,16 @@ Tipos numéricos:
   <p> **int**   inteiro
   <p> **float**    decimal
 
-Operadores matemáticos:
-* +  adição
-* -  subtração
-* +  multiplicação
-* **  potência
-* /  divisão ( sempre resultará em um número decimal)
-* //  divisão com resultado inteiro
-* %  "resto da divisão"</p>
-
 ````programming
+Operadores matemáticos:
++  adição
+-  subtração
+*  multiplicação
+**  potência
+/  divisão ( sempre resultará em um número decimal)
+//  divisão com resultado inteiro
+%  "resto da divisão"
+
 >>> 2+3
 5
 >>> 6-2
