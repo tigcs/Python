@@ -5,7 +5,7 @@ Tipos numéricos:
   <p> **float**    decimal
 
 ````programming
-Operadores matemáticos:
+Operadores:
 +  adição
 -  subtração
 *  multiplicação
@@ -13,6 +13,14 @@ Operadores matemáticos:
 /  divisão ( sempre resultará em um número decimal)
 //  divisão com resultado inteiro
 %  "resto da divisão"
+
+Operadores relacionais:
+== igual
+!= diferente
+> maior
+< menor
+>= maior ou igual
+<= menor ou igual
 
 >>> 2+3
 5
@@ -40,8 +48,17 @@ Operadores matemáticos:
 0
 >>> 5%2
 1
->>> 
+>>>  100 == 10*10
+True
+>>> 100 != 10*10
+False
+
+
+
 ````
+
+
+
 === <p>
 #### >>> Lista as funções nativa do python <<<
 
