@@ -1,11 +1,26 @@
 ### >>> Comandos Básicos <<<
 
-Tipos numéricos:
-  <p> **int**   inteiro
-  <p> **float**    decimal
+#### Tipos de variáveis:
+````programming  
 
+>>> type(5)
+<class 'int'>
+
+>>> type(5.2)
+<class 'float'>
+
+>>> type("texto")
+<class 'str'>
+
+>>> type(True) # Atenção para a inicial maiúscula
+<class 'bool'>
+
+>>> type(False) # Atenção para a inicial maiúscula
+<class 'bool'>
+````
+
+#### Operadores:
 ````programming
-Operadores:
 +  adição
 -  subtração
 *  multiplicação
