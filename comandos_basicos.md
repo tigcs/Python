@@ -122,5 +122,28 @@ sqrt(...)
 # Usando a função `sqrt`
 >>> math.sqrt(4)
 2.0
+
+# Acessando constantes presentes no módulo `math`
+>>> math.pi
+3.141592653589793
 ````
 ===
+
+#### Funções:
+##### Formato padrão de uma função
+O Recuo (Indentation)é o que determina se a linha está presente de
+````programming
+def nome_da_função (argumentos_da_função):
+    # Linhas de comandos com recuo!
+    Linhas de comando da função
+    return (objeto resultado da função)
+    # linha vazia
+# Fim do Recuo.
+
+# Exemplo
+def minha_funcao (x):
+    y=x**2
+    return (y)
+
+minha_funcao(5)
+25
