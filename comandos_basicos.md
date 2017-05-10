@@ -147,3 +147,50 @@ def minha_funcao (x):
 
 minha_funcao(5)
 25
+````
+As variáveis criadas podem ser globais ou locais. Serão locais aquelas variáveis criadas dentro de uma função. 
+Serão globais as variáveis criadas fora de uma função.
+Sendo uma variável global `z`, ela não é alterar por uma função sem usar o comando `global`. Exemplo:
+
+```` programming
+x= 10
+
+def minha_funcao (x):
+    y=x**2
+    x= 15
+    return (y)
+
+
+minha_funcao(5)
+25
+print(x)
+10
+````
+```` programming
+z= 10
+
+def minha_funcao (x):
+    y=x**2
+    z= 15
+    return (y)
+
+minha_funcao(5)
+25
+print(z)
+10
+````
+
+```` programming
+z= 10
+
+def minha_funcao (x):
+    global z
+    y=x**2
+    z= 15
+    return (y)
+
+minha_funcao(5)
+25
+print(z)
+15
+````
