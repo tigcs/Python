@@ -131,7 +131,7 @@ sqrt(...)
 
 #### Funções:
 ##### Formato padrão de uma função
-O Recuo (Indentation)é o que determina se a linha está presente de
+
 ````programming
 def nome_da_função (argumentos_da_função):
     # Linhas de comandos com recuo!
