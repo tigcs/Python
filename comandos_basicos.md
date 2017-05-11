@@ -1,6 +1,7 @@
 ### >>> Comandos Básicos <<<
 
-#### Tipos de variáveis:
+=== <p>
+#### >>> Tipos de variáveis:
 ````programming  
 
 >>> type(5)
@@ -19,7 +20,8 @@
 <class 'bool'>
 ````
 
-#### Operadores:
+=== <p>
+#### >>> Operadores:
 ````programming
 +  adição
 -  subtração
@@ -67,22 +69,15 @@ Operadores relacionais:
 True
 >>> 100 != 10*10
 False
-
-
-
 ````
-
-
-
 === <p>
-#### >>> Lista as funções nativa do python <<<
-
+#### >>> Lista as funções nativa do python
 ````programming
 >>> dir(__builtins__)
 ['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException', 'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning', 'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError', 'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning', 'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False', 'FileExistsError', 'FileNotFoundError', 'FloatingPointError', 'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError', 'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError', 'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError', 'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented', 'NotImplementedError', 'OSError', 'OverflowError', 'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError', 'RecursionError', 'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning', 'StopAsyncIteration', 'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError', 'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError', 'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError', 'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning', 'ValueError', 'Warning', 'WindowsError', 'ZeroDivisionError', '__build_class__', '__debug__', '__doc__', '__import__', '__loader__', '__name__', '__package__', '__spec__', 'abs', 'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable', 'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits', 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit', 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass', 'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview', 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property', 'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice', 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars', 'zip']
 ````
 === <p>
-#### >>> Ajuda sobre as funções nativas <<<
+#### >>> Ajuda sobre as funções nativas
 
 Os argumentos entre parêntesesm são opcionais, o restante são obrigatórios.
 ````programing
@@ -99,18 +94,16 @@ max(...)
     With two or more arguments, return the largest argument.
 ````
 === <p>
-
-#### >>> Importar módulos (ou pacotes) que contenham funções que deseja usar <<<
-
+#### >>> Importar módulos (ou pacotes) que contenham funções que deseja usar
 ````programing
-
 import math
 
 # Listando todas as funções contidas no módulo `math`
 >>> dir(math)
 ['__doc__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'log2', 'modf', 'nan', 'pi', 'pow', 'radians', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'trunc']
 
-# Acessando o help da função `sqrt`
+=== <p>
+#### >>> Acessando o help da função `sqrt`
 >>>help(math.sqrt)
 Help on built-in function sqrt in module math:
 
@@ -127,9 +120,8 @@ sqrt(...)
 >>> math.pi
 3.141592653589793
 ````
-===
-
-#### Funções:
+=== <p>
+#### >>>Funções:
 ##### Formato padrão de uma função
 
 ````programming
