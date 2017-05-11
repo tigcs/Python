@@ -121,7 +121,7 @@ sqrt(...)
 3.141592653589793
 ````
 === <p>
-#### >>>Funções:
+#### >>> Funções:
 ##### Formato padrão de uma função
 
 ````programming
@@ -186,3 +186,11 @@ minha_funcao(5)
 print(z)
 15
 ````
+=== <p>
+#### >>> Input de dados
+##### Pode se fazer um input de dados interativo a partir do teclado, solicitando ao usuário que digite-o. O interpretador
+fica aguardando que o dado seja inserido para continuar a executar o restante do código. Exemplo:
+
+# Entrada da temperatura em Fahrenheit
+F = float(input("Digite a temperatura em Fahrenheit: "))
+>>> Digite a temperatura em Fahrenheit: 
