@@ -194,3 +194,36 @@ print(z)
 F = float(input("Digite a temperatura em Fahrenheit: "))
 >>> Digite a temperatura em Fahrenheit: 
 ````
+=== <p>
+
+#### >>> String
+##### Concatenação de string com sinal +. Indexação de caracteres do srting com `[]` e funções: `str`, `.upper`, `.split`.
+```` programming
+>>> x = "ab"
+>>> y = "cd"
+>>> x+y
+'abcd'
+>>> z = "abcdef"
+>>> z[0]
+'a'
+>>> z[1]
+'b'
+>>> z[-1]
+'f'
+>>> z[5]
+'f'
+>>> z[0:2]
+'ab'
+>>> z[0:3]
+'abc'
+>>> z.upper()
+'ABCDEF'
+>>> w = "Olá Fulano de Tal"
+>>> w.split()
+['Olá', 'Fulano', 'de', 'Tal']
+>>> s = str("9876")
+>>> s
+'9876'
+>>> s[-2]
+'7'
+````
