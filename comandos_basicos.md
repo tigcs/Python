@@ -272,6 +272,43 @@ else:
     falsa
 # fim de indentação
 ````
+=== <p>
 
+#### >>> Repetição
+```` programming
+while condição:
+    bloco
+    de
+    comandos
+    com
+    indentação
+# fim de indentação
+# O bloco de comandos é repetido enquanto a condição for verdadeira.
+````
+##### Exemplos:
+
+```` programming
+# Imprimi as 10 primeiras potências de 2
+i = 0
+while i <= 10:
+    print (2**i)
+    i = i + 1
+````
+
+```` programming
+# Soma a sequência de valores digitados e  pára quando 0 é digitado.
+
+print("Digite uma sequência de valores terminada por zero.")
+soma = 0
+valor = 1
+while valor != 0:
+    valor = float(input("Digite um valor a ser somado: "))
+    soma = soma + valor - 1
+print ("A soma dos valores digitados é: ", soma)
+````
+=== <p>
+
+#### >>> Repetição
+```` programming
 
 
