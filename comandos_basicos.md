@@ -39,6 +39,22 @@ Operadores relacionais:
 >= maior ou igual
 <= menor ou igual
 
+Operadores lógicos:
+and e
+or ou
+not inverte um valor booleano(True or False)
+
+Precedência de operadores em ordem crescente
+()
+**
+*,/,//,%
++,-
+==,!=,<=,>=,<,>
+not
+and
+or
+
+
 >>> 2+3
 5
 >>> 6-2
@@ -227,3 +243,35 @@ F = float(input("Digite a temperatura em Fahrenheit: "))
 >>> s[-2]
 '7'
 ````
+=== <p>
+
+#### >>> Condicional
+
+```` programming
+if condição:
+    bloco
+    de
+    comandos
+    com
+    indentação
+# fim de indentação
+````
+
+```` programming
+if condição:
+    comandos
+    caso
+    condição
+    seja
+    verdadeira
+else:
+    comandos
+    caso
+    condição
+    seja
+    falsa
+# fim de indentação
+````
+
+
+
