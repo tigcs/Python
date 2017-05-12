@@ -308,7 +308,5 @@ print ("A soma dos valores digitados é: ", soma)
 ````
 === <p>
 
-#### >>> Repetição
-```` programming
 
 
