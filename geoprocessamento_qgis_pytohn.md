@@ -39,14 +39,17 @@ ALGORITHM: Clip
 ```
 
 ##### 6 - Lista as opções de parâmetros a serem selecionados ao rodar o algoritmo (ferramenta). Para tanto deve-se informar o número inteiro correspondente.
-
+```programming
+>>> processing.algoptions("nome_da_linha_de_comando_da_função")
+```
 ```programming
 >>> processing.algoptions("qgis:selectbylocation")
 METHOD(Modificar seleção atual por)
 	0 - Criar uma nova seleção
 	1 - Adicionar à seleção atual
 	2 - Remover da seleção atual
-
+```
+```programming
 >>> processing.alghelp("qgis:selectbylocation")
 ALGORITHM: Select by location
 	INPUT <ParameterVector>
