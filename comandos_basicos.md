@@ -20,6 +20,7 @@
 ```
 #### >>> Operadores:
 ```programming
+# Operadores matemáticos:
 +  adição
 -  subtração
 *  multiplicação
@@ -28,7 +29,7 @@
 //  divisão com resultado inteiro
 %  "resto da divisão"
 
-Operadores relacionais:
+# Operadores relacionais:
 == igual
 != diferente
 > maior
@@ -36,12 +37,12 @@ Operadores relacionais:
 >= maior ou igual
 <= menor ou igual
 
-Operadores lógicos:
+# Operadores lógicos:
 and e
 or ou
 not inverte um valor booleano(True or False)
 
-Precedência de operadores em ordem crescente
+# Precedência de operadores em ordem crescente
 ()
 **
 *,/,//,%
@@ -51,7 +52,7 @@ not
 and
 or
 
-
+# Exemplos:
 >>> 2+3
 5
 >>> 6-2
