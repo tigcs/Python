@@ -37,3 +37,26 @@ ALGORITHM: Clip
 ```programming
 >>> processing.runalg(nome_da_linha_de_comando_da_função, param1, param2, ..., paramN,Output1, Output2, ..., OutputN)
 ```
+
+##### 6 - Lista as opções de parâmetros a serem selecionados ao rodar o algoritmo (ferramenta). Para tanto deve-se informar o número inteiro correspondente.
+
+```programming
+>>> processing.algoptions("qgis:selectbylocation")
+METHOD(Modificar seleção atual por)
+	0 - Criar uma nova seleção
+	1 - Adicionar à seleção atual
+	2 - Remover da seleção atual
+
+>>> processing.alghelp("qgis:selectbylocation")
+ALGORITHM: Select by location
+	INPUT <ParameterVector>
+	INTERSECT <ParameterVector>
+	PREDICATE <ParameterGeometryPredicate>
+	PRECISION <ParameterNumber>
+	METHOD <ParameterSelection>
+	OUTPUT <OutputVector>
+METHOD(Modificar seleção atual por)
+	0 - Criar uma nova seleção
+	1 - Adicionar à seleção atual
+	2 - Remover da seleção atual
+```
