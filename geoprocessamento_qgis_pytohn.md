@@ -37,7 +37,10 @@ ALGORITHM: Clip
 ```programming
 >>> processing.runalg(nome_da_linha_de_comando_da_função, param1, param2, ..., paramN,Output1, Output2, ..., OutputN)
 ```
-
+```programming
+# Faz o clip
+processing.runalg("qgis:clip", camada_input, camada_overlay, "C:/Users/tigcs/Desktop/Python_USP/CLIP1.shp")
+```
 ##### 6 - Lista as opções de parâmetros a serem selecionados ao rodar o algoritmo (ferramenta). Para tanto deve-se informar o número inteiro correspondente.
 ```programming
 >>> processing.algoptions("nome_da_linha_de_comando_da_função")
@@ -79,3 +82,17 @@ METHOD(Modificar seleção atual por)
 >>> lf
 ['rodovia_ferrovia_CER.shp', 'rodovia_ferrovia_CER_1.shp', 'rodovia_ferrovia_CER_2.shp']
 ```
+##### 8 - Carrega um shapefile para ser processado. 
+```programming
+layer = QgsVectorLayer(data_source, layer_name, provider_name)
+if not layer.isValid():
+  print "Layer failed to load!"
+```
+```programming
+# Carrega a camada de input
+camada_input = QgsVectorLayer("C:/Users/tigcs/Desktop/Python_USP/UF.shp","UF","ogr")
+# Checa se é uma camada válida
+camada_input.isValid()
+>>> True
+```
+
