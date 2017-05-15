@@ -91,7 +91,7 @@ False
 ```
 #### >>> Ajuda sobre as funções nativas
 
-Os argumentos entre parêntesesm são opcionais, o restante são obrigatórios.
+Os argumentos entre colchetes são opcionais, o restante é obrigatório.
 ```programing
 >>> help(max)
 Help on built-in function max in module builtins:
