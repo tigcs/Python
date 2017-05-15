@@ -24,7 +24,7 @@ Clip vectors by polygon------------------------------>gdalogr:clipvectorsbypolyg
 ```
 ##### 4 - Acessa às informações de ajuda da função. 
 ```programming
-`processing.alghelp("nome_da_linha_de_comando_da_função")`
+>>> processing.alghelp("nome_da_linha_de_comando_da_função")
 ```
 ```programming
 >>> processing.alghelp("qgis:clip")
@@ -32,4 +32,8 @@ ALGORITHM: Clip
 	INPUT <ParameterVector>
 	OVERLAY <ParameterVector>
 	OUTPUT <OutputVector>
+```
+##### 5 - Roda o algoritmo (ferramenta). 
+```programming
+>>> processing.runalg(nome_da_linha_de_comando_da_função, param1, param2, ..., paramN,Output1, Output2, ..., OutputN)
 ```
