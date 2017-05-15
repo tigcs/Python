@@ -131,7 +131,7 @@ sqrt(...)
 >>> math.pi
 3.141592653589793
 ```
-#### >>> Funções:
+#### >>> Funções
 ##### Formato padrão de uma função
 ```programming
 def nome_da_função (argumentos_da_função):
@@ -151,7 +151,7 @@ minha_funcao(5)
 ```
 As variáveis criadas podem ser globais ou locais. Serão locais aquelas variáveis criadas dentro de uma função. 
 Serão globais as variáveis criadas fora de uma função.
-Sendo uma variável global `z`, ela não é alterar por uma função sem usar o comando `global`. Exemplo:
+Sendo uma variável global `z`, ela não é alterada por uma função sem usar o comando `global`. Exemplo:
 
 ``` programming
 x= 10
@@ -196,7 +196,7 @@ print(z)
 15
 ```
 #### >>> Input de dados
-##### Pode se fazer um input de dado interativamente a partir do teclado, solicitando ao usuário que digite-o. O interpretador fica aguardando que o dado seja inserido para continuar a executar o restante do código. Todo dado inserido por meio da função `input` é interpredado como `string`, portanto ao usar números é necessário fazer a conversão usando `int`ou `float`. Exemplo:
+##### Pode se fazer um input de dado interativamente a partir do teclado, solicitando ao usuário que o digite. O interpretador fica aguardando que o dado seja inserido para continuar a executar o restante do código. Todo dado inserido por meio da função `input` é interpredado como `string`, portanto ao usar números é necessário fazer a conversão usando `int`ou `float`. Exemplo:
 ``` programming
 # Entrada da temperatura em Fahrenheit
 F = float(input("Digite a temperatura em Fahrenheit: "))
@@ -280,7 +280,7 @@ while i <= 10:
 ```
 
 ``` programming
-# Soma a sequência de valores digitados e  pára quando 0 é digitado.
+# Soma a sequência de valores digitados e pára quando 0 é digitado.
 
 print("Digite uma sequência de valores terminada por zero.")
 soma = 0
