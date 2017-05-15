@@ -65,10 +65,14 @@ METHOD(Modificar seleção atual por)
 ```
 ##### 7 - Lista todos os caminhos para os shapefiles armazenados em um diretório. 
 ```programming
-# Importa o módulo os que permite acessar as funcionalidades do sistema operacional
+# Importa o módulo `os` que permite acessar as funcionalidades do sistema operacional
 >>> import os
+# Cria uma variável com o caminho do diretório desejado
 >>> wd = "D:/PRIM_estrada" 
+# Cria uma lista vazia que irá receber os caminhos
 >>> lf = list()
+# Loop pela lista de todos os caminhos de arquivos existentes no diretório
+# e adiciona à lista (lf) apenas aqueles que terminam com ".shp"
 >>> for file in os.listdir(wd):
 	if file.endswith(".shp"):
 		lf.append (file)
