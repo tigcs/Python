@@ -63,3 +63,15 @@ METHOD(Modificar seleção atual por)
 	1 - Adicionar à seleção atual
 	2 - Remover da seleção atual
 ```
+##### 7 - Lista todos os caminhos para os shapefiles armazenados em um diretório. 
+```programming
+# Importa o módulo os que permite acessar as funcionalidades do sistema operacional
+>>> import os
+>>> wd = "D:/PRIM_estrada" 
+>>> lf = list()
+>>> for file in os.listdir(wd):
+	if file.endswith(".shp"):
+		lf.append (file)
+>>> lf
+['rodovia_ferrovia_CER.shp', 'rodovia_ferrovia_CER_1.shp', 'rodovia_ferrovia_CER_2.shp']
+```
