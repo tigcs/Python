@@ -105,7 +105,7 @@ max(...)
     the provided iterable is empty.
     With two or more arguments, return the largest argument.
 ```
-#### >>> Importar módulos (ou pacotes) que contenham funções que deseja usar
+#### >>> Importa módulos (ou pacotes) que contenham as funções  e classes desejadas
 ```programing
 import math
 
