@@ -1,4 +1,4 @@
-### >>> Comandos Básicos <<<
+### >>> Comandos básicos  em Python <<<
 
 #### >>> Tipos de variáveis:
 ```programming  
