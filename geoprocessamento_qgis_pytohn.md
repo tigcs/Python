@@ -90,9 +90,29 @@ if not layer.isValid():
 ```
 ```programming
 # Carrega a camada de input
-camada_input = QgsVectorLayer("C:/Users/tigcs/Desktop/Python_USP/UF.shp","UF","ogr")
+camada_input = QgsVectorLayer("C:/Users/tigcs/Desktop/Python_USP/grid21.shp","UF","ogr")
 # Checa se é uma camada válida
 camada_input.isValid()
 >>> True
 ```
+##### 9 - Imprime o nome do primeiro campo da tabela de atributos. 
+```programming
+# Neste caso, 0 refere-se ao índice do primeiro campo. 
+print grid21.fields()[0].name()
+>>> Id
+```
+##### 10 - Imprime o nome de todos os campos da tabela de atributos. 
+```programming
+for field in grid21.fields():
+    print field.name(), field.typeName()
+>>> Id Integer
+```
+##### 11 - Adiciona um campo à tabela de atributos. 
+```programming
+# Opção 1: Nesta opção o shapefile com o novo campo tem que ser salvo. E é necessário fazer o import do módulo processing.
+processing.runalg("qgis:addfieldtoattributestable", grid21, "grupo", 0, 3, 3, "C:/Users/tigcs/Desktop/Python_USP/grid21_.shp")
+```
+
+
+
 
