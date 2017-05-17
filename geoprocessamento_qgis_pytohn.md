@@ -169,6 +169,20 @@ for feature in iter:
         grupo = grupo + 1
         bloco = bloco + len(Id)/num_grupos
 ``` 
+##### 11 - Salva um shapefile.
+```programming
+
+# Determina o sistema de referência espacial: EPSG WGS84 = 4326, SIRGAS 2000 = 4674, Albers_Equal_Area = 102033
+crs = QgsCoordinateReferenceSystem("EPSG:4674")
+
+# Cria variáveis com o caminho e nome do arquivo
+save_path = "D:/Python_USP/"
+nome_shp = "grid21_G"
+save_path_nome = save_path+nome_shp+".shp"
+
+# Salva o shapefile
+QgsVectorFileWriter.writeAsVectorFormat(grid21, save_path_nome, "utf-8", crs, "ESRI Shapefile")
+```
 
 
 
