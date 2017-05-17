@@ -39,7 +39,7 @@ ALGORITHM: Clip
 ```
 ```programming
 # Faz o clip
-processing.runalg("qgis:clip", camada_input, camada_overlay, "C:/Users/tigcs/Desktop/Python_USP/CLIP1.shp")
+processing.runalg("qgis:clip", camada_input, camada_overlay, "D:/Python_USP/CLIP1.shp")
 ```
 ##### 6 - Lista as opções de parâmetros a serem selecionados ao rodar o algoritmo (ferramenta). Para tanto deve-se informar o número inteiro correspondente.
 ```programming
@@ -90,28 +90,85 @@ if not layer.isValid():
 ```
 ```programming
 # Carrega a camada de input
-camada_input = QgsVectorLayer("C:/Users/tigcs/Desktop/Python_USP/grid21.shp","UF","ogr")
+camada_input = QgsVectorLayer("D:/Python_USP/grid21.shp","UF","ogr")
 # Checa se é uma camada válida
 camada_input.isValid()
 >>> True
 ```
-##### 9 - Imprime o nome do primeiro campo da tabela de atributos. 
+##### 9 - Acessando a tabela de atributos.
+##### 9.1 - Imprime o nome do primeiro campo da tabela de atributos. 
 ```programming
 # Neste caso, 0 refere-se ao índice do primeiro campo. 
 print grid21.fields()[0].name()
 >>> Id
 ```
-##### 10 - Imprime o nome de todos os campos da tabela de atributos. 
+##### 9.2 - Imprime o nome de todos os campos da tabela de atributos. 
 ```programming
 for field in grid21.fields():
     print field.name(), field.typeName()
 >>> Id Integer
 ```
-##### 11 - Adiciona um campo à tabela de atributos. 
+##### 9.3 - Imprime os valores dos atributos.
+```programming
+# Pode-se criar um iterador (iter) e usá-lo no for loop. 
+# Após rodar o for loop o iterador é apagado automaticamente, tendo de ser recriado caso seja necessário rodar outro for loop.
+iter = grid21.getFeatures()
+for feature in iter:
+    # Imprime o id da feição
+    print feature.id()
+    # ou # print feature["Id"]
+
+# Ou Criar um iterador já no enunciado do for loop.
+for feature in grid21.getFeatures():
+    # Imprime o id da feição
+    print feature.id()
+```
+```programming
+# Cria uma lista com todos dos valores do campo "Id"
+# cria uma lista vazia que receberá os valores
+Id = list()
+for feature in grid21.getFeatures():
+    Id.append (feature ["Id"])
+```
+##### 10 - Editando a tabela de atributos.
+##### 10.1 - Adiciona um campo à tabela de atributos. 
 ```programming
 # Opção 1: Nesta opção o shapefile com o novo campo tem que ser salvo. E é necessário fazer o import do módulo processing.
-processing.runalg("qgis:addfieldtoattributestable", grid21, "grupo", 0, 3, 3, "C:/Users/tigcs/Desktop/Python_USP/grid21_.shp")
+processing.runalg("qgis:addfieldtoattributestable", grid21, "grupo", 0, 3, 3, "D:/Python_USP/grid21_.shp")
 ```
+```programming
+# Opção 2: Nesta opção o novo campo é adicionado na camada carregada na memória.
+from PyQt4.QtCore import QVariant
+vpr = grid21.dataProvider()
+vpr.addAttributes([QgsField("grupo", QVariant.Int)])
+grid21.updateFields()
+```
+##### 10.2 - Altera o valor de um campo na tabela de atributos. 
+```programming
+iter = grid21.getFeatures()
+for feature in iter:
+    # feature.id()-> traz o id da feição, 1 -> é i índice do campo, 9 -> é o valor a ser inserido.
+    # o índice da coluna pode ser acessado por: grid21.fieldNameIndex("grupo")
+    grid21.changeAttributeValue(feature.id(),1,9)
+    # outra opção:
+    #grid21.changeAttributeValue(feature.id(),grid21.fieldNameIndex("grupo"),9)
+```
+##### 10.3 - Altera o valor de um campo na tabela de atributos utilizando-se de uma condição.
+```programming
+# Divide as feições em grupos aplicando-se uma condição. Neste caso serão 3 grupos com 7 feições cada. 
+# len(Id)=> 21
+num_grupos = 3
+bloco = len(Id)/num_grupos
+grupo = 1
+iter = grid21.getFeatures()
+for feature in iter:
+    if feature ["Id"] <= bloco:
+        grid21.changeAttributeValue(feature.id(),grid21.fieldNameIndex("grupo"),grupo)
+    else:
+        grid21.changeAttributeValue(feature.id(),grid21.fieldNameIndex("grupo"),(grupo+1))
+        grupo = grupo + 1
+        bloco = bloco + len(Id)/num_grupos
+``` 
 
 
 
