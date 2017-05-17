@@ -90,7 +90,7 @@ if not layer.isValid():
 ```
 ```programming
 # Carrega a camada de input
-camada_input = QgsVectorLayer("D:/Python_USP/grid21.shp","UF","ogr")
+camada_input = QgsVectorLayer("D:/Python_USP/grid21.shp","grid21","ogr")
 # Checa se é uma camada válida
 camada_input.isValid()
 >>> True
@@ -141,6 +141,7 @@ processing.runalg("qgis:addfieldtoattributestable", grid21, "grupo", 0, 3, 3, "D
 from PyQt4.QtCore import QVariant
 vpr = grid21.dataProvider()
 vpr.addAttributes([QgsField("grupo", QVariant.Int)])
+# É necessário atualizar os campos ao final do processo.
 grid21.updateFields()
 ```
 ##### 10.2 - Altera o valor de um campo na tabela de atributos. 
@@ -169,6 +170,14 @@ for feature in iter:
         grupo = grupo + 1
         bloco = bloco + len(Id)/num_grupos
 ``` 
+##### 10.4 - Remove um campo da tabela de atributos.
+```programming
+# É necessário fornecer o índice do campo. Não funciona com o nome. O índice pode ser obtido com a função layer.fieldNameIndex("nome_do_campo")
+for field in grid21.fields():
+    grid21.dataProvider().deleteAttributes([grid21.fieldNameIndex("grupo")])
+# Assim como na adição de um campo, é necessário atualizar os cmapos ao final do processo.
+grid21.updateFields()
+```
 ##### 11 - Salva um shapefile.
 ```programming
 
