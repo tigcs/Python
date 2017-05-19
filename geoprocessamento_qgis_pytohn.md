@@ -157,7 +157,25 @@ for feature in iter:
 ##### 10.3 - Altera o valor de um campo na tabela de atributos utilizando-se de uma condição.
 ```programming
 # Divide as feições em grupos aplicando-se uma condição. Neste caso serão 3 grupos com 7 feições cada. 
+Id = list()
+for feature in grid.getFeatures():
+    Id.append(feature.id())
+
 # len(Id)=> 21
+num_grupos = 3
+bloco = len(Id)/num_grupos
+grupo = 1
+for feature in grid.getFeatures():
+     if feature ["Id"] <= bloco:
+         atributo = {grid.fieldNameIndex("grupo") : grupo}
+         grid.dataProvider().changeAttributeValues({feature.id() : atributo})
+     else:
+         atributo = {grid.fieldNameIndex("grupo") : (grupo+1)}
+         grid.dataProvider().changeAttributeValues({feature.id() : atributo})
+         grupo = grupo + 1
+         bloco = bloco + len(Id)/num_grupos
+
+# Verificar se o código abaixo também funciona
 num_grupos = 3
 bloco = len(Id)/num_grupos
 grupo = 1
