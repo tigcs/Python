@@ -291,6 +291,10 @@ while valor != 0:
 print ("A soma dos valores digitados é: ", soma)
 ```
 
-
+#### >>> Desligar o PC
+``` programming
+import sys, os
+os.system("shutdown -s")
+```
 
 
