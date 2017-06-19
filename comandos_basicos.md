@@ -290,7 +290,11 @@ while valor != 0:
     soma = soma + valor - 1
 print ("A soma dos valores digitados é: ", soma)
 ```
-
+#### >>> For
+``` programming
+for item in lista:
+    comando
+```
 #### >>> Desligar o PC
 ``` programming
 import sys, os
