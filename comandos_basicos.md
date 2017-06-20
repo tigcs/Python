@@ -295,6 +295,47 @@ print ("A soma dos valores digitados é: ", soma)
 for item in lista:
     comando
 ```
+#### >>> Listas
+``` programming
+# Criar uma lista
+lista1 = [1,2,3]
+lista1 [0] = 5
+lista1
+[5,2,3]
+# Assim ambas as listas ficam com a mesma referência. São uma mesma lista, mas com nomes diferentes.
+lista2 = lista1
+lista2
+[5,2,3]
+# Também irá alterar a lista2, pois ambas estão referênciadas a mesma lista
+lista1 [0] = 4
+lista2
+[4,2,3]
+
+# Para clonar uma lista. Assim lista2 terá os mesmos elementos da lista 1 mas será uma nova lista.
+lista2 = lista1[:]
+
+# Pertinência a uma lista usa-se o comando "in"
+2 in lista2
+True
+
+# Concatenação de listas
+[1,2] + [3,4]
+[1,2,3,4]
+lista1 + lista2
+[4,2,3,4,2,3]
+
+# Append altera uma lista existente
+a = [1,2,3]
+a.append("gato")
+a = [1,2,3,"gato"]
+# b = a + 5 # Isso não funciona pois, 5 não é uma lista só pode concatenar lista com lista.
+b = a + [5]
+b 
+[1,2,3,"gato",5] 
+
+
+```
+
 #### >>> Desligar o PC
 ``` programming
 import sys, os
