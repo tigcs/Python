@@ -355,6 +355,11 @@ a = [1,2,3]
 del a[1] # Pode-se usar intervalos de itens usando :
 a
 [1,3]
+
+# Comprimento/Tamanho de uma lista
+a = [1,2,3]
+len(a)
+3
 ```
 
 #### >>> Desligar o PC
