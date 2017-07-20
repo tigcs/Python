@@ -340,7 +340,17 @@ b = a + [5]
 b 
 [1,2,3,"gato",5] 
 
+# Repetição de listas
+a = [1,2,3]
+a_triplicado = a * 3
+a_triplicado
+[1,2,3,1,2,3,1,2,3]
 
+# Remoção de elementos
+a = [1,2,3]
+del a[1] # Pode-se usar intervalos de itens usando :
+a
+[1,3]
 ```
 
 #### >>> Desligar o PC
