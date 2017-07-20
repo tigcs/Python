@@ -302,6 +302,13 @@ lista1 = [1,2,3]
 lista1 [0] = 5
 lista1
 [5,2,3]
+lista1[1:2] # ATENÇÃO o último número de posição(2) não é devolvido
+[2]
+lista1[1:3] # A quantidade de itens devolvidos é igual à subtração dos números de posição 3-1 = 2
+[2,3]
+lista[0:2]
+[5,2]
+
 # Assim ambas as listas ficam com a mesma referência. São uma mesma lista, mas com nomes diferentes.
 lista2 = lista1
 lista2
