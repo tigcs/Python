@@ -1,5 +1,8 @@
 ### >>> Comandos básicos  em Python <<<
 
+# Documentação do Python
+docs.python.org
+
 #### >>> Tipos de variáveis:
 ```programming  
 
