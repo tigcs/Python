@@ -1,7 +1,8 @@
-### >>> Comandos básicos  em Python <<<
+## Documentação do Python
+Para dúvidas sobre a linguagem e comandos básicos 
+www.docs.python.org 
 
-# Documentação do Python
-docs.python.org
+### >>> Comandos básicos  em Python <<<
 
 #### >>> Tipos de variáveis:
 ```programming  
