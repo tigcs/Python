@@ -231,7 +231,7 @@ processing.runalg("qgis:selectbylocation", drenagem, rio,['intersects'],0,0)
 # Salva o shapefile
 processing.runalg('qgis:saveselectedfeatures', drenagem, caminho)
 ```
-##### 13 - Conta quantas feições há em uma shapefile
+##### 13 - Conta quantas feições há em um shapefile
 ```programming
 nome_da_camada.featureCount()
 ```
