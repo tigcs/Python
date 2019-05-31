@@ -209,6 +209,27 @@ save_path_nome = save_path+nome_shp+".shp"
 
 # Salva o shapefile
 QgsVectorFileWriter.writeAsVectorFormat(grid21, save_path_nome, "utf-8", crs, "ESRI Shapefile")
+
+##### 12 - Realiza uma seleção por localização e Salva as feições seleciondas em um novo shapefile
+```programming
+import processing
+
+# Carrega as camadas a serem processadas
+rio = QgsVectorLayer('/home/tiago/Documentos/PRIM_Mineracao/rio/mata/rio_doce.shp', 'rio_doce','ogr')
+drenagem = QgsVectorLayer('/home/tiago/Documentos/PRIM_Mineracao/rio/mata/rio_mata_disol.shp','rio_mata_disol','ogr')
+
+# Cria uma variável com o sistema de referência espacial CRS
+crs = QgsCoordinateReferenceSystem("EPSG:4674")
+# Cria variáveis para formar o path onde o shapefile será salvo
+nome1 = '/home/tiago/Documentos/PRIM_Mineracao/rio/mata/'
+nome2 = 'rios_SEL'
+caminho = nome1+nome2+'.shp'
+
+# Faz a seleção por localização. Selecionando rios da drenagem que têm interseção com o rio. ['intersects'] pode ser substituído e combinado com outras opções como: [u'disjoint',u'intersects',u'contains',u'equals',u'touches',u'overlaps',u'within',u'crosses']
+processing.runalg("qgis:selectbylocation", drenagem, rio,['intersects'],0,0)
+
+# Salva o shapefile
+processing.runalg('qgis:saveselectedfeatures', drenagem, caminho)
 ```
 
 
